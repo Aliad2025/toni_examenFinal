@@ -1,0 +1,33 @@
+/* FUENTES */
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Regular.woff") format("woff2");
+}
+
+/* VARIABLES */
+:root {
+    --color-primario: #ff0000;
+    --color-secundario: #0000ff;
+}
+
+/* GENERAL */
+html {
+}
+
+body {
+}
+
+.header {
+    &__logo {
+    }
+    &__imagen {
+    }
+    &__menu {
+    }
+}
+.main {
+}
+.footer {
+    &__copy {
+    }
+}
