@@ -1,33 +1,96 @@
 /* FUENTES */
 @font-face {
-    font-family: "Roboto";
-    src: url("../fonts/Roboto-Regular.woff") format("woff2");
+    font-family: "RobotoRegular";
+    src: url("../font/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "RobotoBold";
+    src: url("../font/Roboto-Bold.ttf") format("truetype");
 }
 
 /* VARIABLES */
 :root {
-    --color-primario: #ff0000;
-    --color-secundario: #0000ff;
+    --color-body: #f4f4f4;
+    --color-container: #fAfAfA;
+    --color-azul: #2E77E9;
+    --color-parrafo: #4B4B4B;
+
+    --size-tipo: 16px;
+    --size-titulo: 2.5rem;
+    --size-subtitulo: 2rem;
+    --size-parrafo: 1rem;
+    --size-boton: 1rem;
 }
 
 /* GENERAL */
 html {
+    font-size: var(--size-tipo);
+    font-family: "RobotoRegular";
 }
 
 body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-body);
+
+    & #container{
+        width: 100%;
+        max-width: 1200px;
+        border-radius: 25px;
+        background-color: var(--color-container);
+        padding: 30px 90px;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 30px;
+    }
 }
 
 .header {
-    &__logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & .header__logo {
+        font-family: "RobotoBold";
+        font-size: var(--size-subtitulo);
+        color: var(--color-azul);
+    }
+    & .header__menu {
+        display: flex;
+        gap: 30px;
     }
     &__imagen {
     }
-    &__menu {
-    }
 }
 .main {
-}
-.footer {
-    &__copy {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 30px;
+
+    align-items: center;
+
+    & p,h4,h5 {
+        margin: 15px 0;
+    }
+
+    & .main__titulo {
+        font-family: "RobotoBold";
+        font-size: 2.5rem;
+    }
+    & .main__subtitulo {
+        font-size: 2rem;
+    }
+    & .main__parrafo {
+    }
+    & .main__boton{
+        display: inline-block;
+        background-color: var(--color-azul);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
     }
 }
